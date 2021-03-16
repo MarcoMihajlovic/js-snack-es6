@@ -103,3 +103,44 @@ squadre.forEach((element) => {
 });
 
 console.log(squadre2);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//Esercizio 3
+/* Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
+Usiamo i nuovi metodi degli array foreach o filter */
+
+console.log(`Esercizio 3
+Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
+Usiamo i nuovi metodi degli array foreach o filter`);
+
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const maxEsercizio3 = Math.floor(Math.random()* 9 + 1);
+const minEsercizio3 = Math.floor(Math.random()* maxEsercizio3);
+
+
+let range = {
+    max: maxEsercizio3,
+    min: minEsercizio3
+};
+
+console.log(range);
+
+let numeriInRange = [];
+let arrayRisultato = array.forEach((element, index) => {
+
+    if (index >= range.min && index <= range.max){
+        numeriInRange.push(element);
+    }
+});
+
+console.log(numeriInRange);
+
+
+//Esercizietto con filter
+/* let array2 = array.filter(element => {
+    return element%2 === 0;
+});
+
+console.log(array2); */
